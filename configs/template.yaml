@@ -1,0 +1,101 @@
+# ==========================================
+# Common Settings ()
+# ==========================================
+# : mmlong, finrag
+benchmark: "mmlong"
+
+# 
+data_root: "/path/to/your/dataset"
+
+#  ()
+output_dir: "./outputs/run_01"
+
+#  (JSONbad_caseQID)
+filter: null
+
+# RAG ()
+rag_system_prompt: "./prompts/prompt0.txt"
+
+# ==========================================
+# Logging ()
+# ==========================================
+# : DEBUG, INFO, WARNING, ERROR, CRITICAL
+logging_level: "INFO"
+
+# ==========================================
+# Model & API (API)
+# ==========================================
+model_name: "qwen3-vl-32b-thinking"
+base_url: "http://localhost/v1"
+api_key: "sk-placeholder"
+
+# ==========================================
+# Retrieval ()
+# ==========================================
+# /
+top_k: 10
+
+# 
+embedding_model: "/path/to/embedding"
+reranker_model: "/path/to/reranker"
+
+# Reranker API  (API)
+reranker_api_base: null
+
+#  finrag 
+finrag_lang: "both"
+
+# 
+trunc_thres: 0.0
+
+# (bbox)
+trunc_bbox: false
+
+# ==========================================
+# Extractor (/OCR)
+# ==========================================
+mineru_server_url: "xxxxxxxxx"
+mineru_model_path: "xxxxxxxxx"
+
+judger_model_name: ""
+judger_base_url: ""
+judger_api_key: ""
+
+extractor_model_name: "xxxxxxxxx"
+extractor_base_url: "xxxxxxxxx"
+extractor_api_key: "sk-placeholder"
+
+# ==========================================
+# Generation Context ()
+# ==========================================
+#  false true 
+use_page: true
+use_page_ocr: false  # OCR
+use_crop: true
+use_ocr: true
+use_ocr_raw: false
+use_ocr_both: true
+
+# ==========================================
+# Staged Evaluation ()
+# ==========================================
+# : retrieval, generation, all
+evaluation_task: "all"
+
+# JSON
+generation_input: null
+evaluation_input: null
+
+# API
+evaluator_api_base: "xxxxxxxxx"
+evaluator_api_key: "${oc.env:EVALUATOR_API_KEY,sk-placeholder}"
+evaluator_model_name: "qwen3-max"
+
+# ==========================================
+# Limit & Threading ()
+# ==========================================
+#  ( null )
+limit: null
+
+#  ( >= 1)
+num_threads: 1

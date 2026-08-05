@@ -1,0 +1,19 @@
+Task:
+Rewrite the question naturally while preserving intent and answer alignment.
+
+Input:
+- Evidence Context:
+{evidence_context}
+- Question Type: {template_type}
+- Original Question: {question}
+- Original Answer: {answer}
+
+Requirements:
+1. Keep the same meaning and constraints.
+2. Make wording natural and less template-like.
+3. Do not mention file/document/meta references.
+4. The rewritten question must still be directly answerable by the original answer.
+5. Generate in {{ language }}.
+
+Output:
+Return only the rewritten question text.

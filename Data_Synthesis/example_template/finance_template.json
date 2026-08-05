@@ -1,0 +1,473 @@
+{
+  "templates": [
+    {
+      "category": "Factual Retrieval",
+      "template_en": "What was the [Metric] reported by [Entity] for [Time Period]?",
+      "template_cn": "[Entity]在[Time Period]报告的[Metric]是多少？",
+      "example_en": "What was the net income reported by Bank of America for 2024?",
+      "example_cn": "美国银行2024年报告的净利润是多少？"
+    },
+    {
+      "category": "Factual Retrieval",
+      "template_en": "List all [Entity] subsidiaries located in [Location] as per [Section].",
+      "template_cn": "根据[Section]，列出位于[Location]的所有[Entity]子公司。",
+      "example_en": "List all Citigroup subsidiaries located in the Bahamas as per Exhibit 21.01.",
+      "example_cn": "根据附件21.01，列出位于巴哈马的所有花旗集团子公司。"
+    },
+    {
+      "category": "Factual Retrieval",
+      "template_en": "What is the fixed dividend rate for [Entity] [Security Type]?",
+      "template_cn": "[Entity]的[Security Type]固定股息率是多少？",
+      "example_en": "What is the fixed dividend rate for Citigroup Series P preferred stock?",
+      "example_cn": "花旗集团P系列优先股的固定股息率是多少？"
+    },
+    {
+      "category": "Factual Retrieval",
+      "template_en": "Identify the [Metric] for [Entity] under the [Regulatory Framework].",
+      "template_cn": "确定[Regulatory Framework]框架下[Entity]的[Metric]。",
+      "example_en": "Identify the CET1 capital ratio for Bank of America under the Basel III advanced approach.",
+      "example_cn": "确定巴塞尔协议III高级方法下美国银行的核心一级资本充足率。"
+    },
+    {
+      "category": "Factual Retrieval",
+      "template_en": "What are the specific [Risk Type] mentioned in [Section]?",
+      "template_cn": "[Section]中提到了哪些具体的[Risk Type]？",
+      "example_en": "What are the specific legal risks mentioned in the Risk Factors section?",
+      "example_cn": "风险因素章节中提到了哪些具体的法律风险？"
+    },
+    {
+      "category": "Factual Retrieval",
+      "template_en": "Does [Entity] operate in [Location] as of [Date]?",
+      "template_cn": "截至[Date]，[Entity]是否在[Location]开展业务？",
+      "example_en": "Does Bank of America operate in all 50 U.S. states as of December 31, 2024?",
+      "example_cn": "截至2024年12月31日，美国银行是否在全美50个州开展业务？"
+    },
+    {
+      "category": "Factual Retrieval",
+      "template_en": "What is the maturity date for [Entity] [Instrument]?",
+      "template_cn": "[Entity]的[Instrument]到期日是哪天？",
+      "example_en": "What is the maturity date for the Step Up Callable Notes issued by BofA Finance LLC?",
+      "example_cn": "美国银行金融有限责任公司发行的阶梯式可赎回票据的到期日是哪天？"
+    },
+    {
+      "category": "Factual Retrieval",
+      "template_en": "Who is the [Role] of [Entity] according to the [Time Period] filing?",
+      "template_cn": "根据[Time Period]的申报文件，[Entity]的[Role]是谁？",
+      "example_en": "Who is the CEO of JPMorgan Chase according to the 2024 10-K filing?",
+      "example_cn": "根据2024年10-K文件，摩根大通的首席执行官是谁？"
+    },
+    {
+      "category": "Factual Retrieval",
+      "template_en": "What is the [Metric] for [Entity]'s [Segment] in [Time Period]?",
+      "template_cn": "[Entity]的[Segment]在[Time Period]的[Metric]是多少？",
+      "example_en": "What is the net interest margin for Citigroup's banking segment in 2024?",
+      "example_cn": "花旗集团银行业务板块2024年的净利息收益率是多少？"
+    },
+    {
+      "category": "Factual Retrieval",
+      "template_en": "List the events of default for [Entity] [Instrument].",
+      "template_cn": "列出[Entity]的[Instrument]的违约事件。",
+      "example_en": "List the events of default for the BofA Finance Indenture.",
+      "example_cn": "列出美国银行金融契约的违约事件。"
+    },
+    {
+      "category": "Factual Retrieval",
+      "template_en": "Identify the primary sources of [Risk] for [Entity] in [Time Period].",
+      "template_cn": "确定[Entity]在[Time Period]的主要[Risk]来源。",
+      "example_en": "Identify the primary sources of liquidity risk for Bank of America in 2024.",
+      "example_cn": "确定美国银行2024年流动性风险的主要来源。"
+    },
+    {
+      "category": "Factual Retrieval",
+      "template_en": "What is the ticker symbol for [Entity] [Security]?",
+      "template_cn": "[Entity]的[Security]股票代码是什么？",
+      "example_en": "What is the ticker symbol for Bank of America common stock?",
+      "example_cn": "美国银行普通股的股票代码是什么？"
+    },
+    {
+      "category": "Factual Retrieval",
+      "template_en": "What are the [Metric] thresholds for [Entity]'s [Program]?",
+      "template_cn": "[Entity]的[Program]中[Metric]的阈值是多少？",
+      "example_en": "What are the CET1 capital ratio thresholds for JPMorgan's PSU adjustments?",
+      "example_cn": "摩根大通绩效股票单位调整的核心一级资本比率阈值是多少？"
+    },
+    {
+      "category": "Factual Retrieval",
+      "template_en": "Which accounting firm audited [Entity]'s [Time Period] financial statements?",
+      "template_cn": "哪家会计师事务所审计了[Entity]在[Time Period]的财务报表？",
+      "example_en": "Which accounting firm audited Citigroup's 2024 financial statements?",
+      "example_cn": "哪家会计师事务所审计了花旗集团2024年的财务报表？"
+    },
+    {
+      "category": "Factual Retrieval",
+      "template_en": "What is the redemption value per share for [Entity] [Security]?",
+      "template_cn": "[Entity]的[Security]每股赎回价值是多少？",
+      "example_en": "What is the redemption value per share for Bank of America Series 5 preferred stock?",
+      "example_cn": "美国银行第5系列优先股的每股赎回价值是多少？"
+    },
+    {
+      "category": "Factual Retrieval",
+      "template_en": "Identify the total [Metric] for [Entity] in [Time Period].",
+      "template_cn": "确定[Entity]在[Time Period]的总[Metric]。",
+      "example_en": "Identify the total nonperforming balances for Bank of America in 2024.",
+      "example_cn": "确定美国银行2024年的总不良余额。"
+    },
+    {
+      "category": "Factual Retrieval",
+      "template_en": "What type of inputs are used for [Metric] valuations in [Section]?",
+      "template_cn": "[Section]中用于[Metric]估值的输入类型是什么？",
+      "example_en": "What type of inputs are used for Level 3 valuations in Wells Fargo's report?",
+      "example_cn": "富国银行报告中用于三级估值的输入类型是什么？"
+    },
+    {
+      "category": "Factual Retrieval",
+      "template_en": "List the business segments of [Entity] as described in [Section].",
+      "template_cn": "列出[Section]中描述的[Entity]业务板块。",
+      "example_en": "List the business segments of Goldman Sachs as described in the 10-K filing.",
+      "example_cn": "列出10-K文件中描述的高盛业务板块。"
+    },
+    {
+      "category": "Factual Retrieval",
+      "template_en": "What is the frequency of [Process] at [Entity]?",
+      "template_cn": "[Entity]的[Process]频率是多少？",
+      "example_en": "What is the frequency of model validation at Goldman Sachs?",
+      "example_cn": "高盛的模型验证频率是多少？"
+    },
+    {
+      "category": "Factual Retrieval",
+      "template_en": "Identify the [Metric] for [Entity] as of [Date].",
+      "template_cn": "确定截至[Date][Entity]的[Metric]。",
+      "example_en": "Identify the total value of Citigroup's deferred tax assets as of year-end 2024.",
+      "example_cn": "确定截至2024年底花旗集团递延所得税资产的总价值。"
+    },
+    {
+      "category": "Complex Synthesis",
+      "template_en": "How does [Entity]'s [Strategy] impact its [Metric] over [Time Period]?",
+      "template_cn": "[Entity]的[Strategy]如何影响其在[Time Period]内的[Metric]？",
+      "example_en": "How does Bank of America's digital adoption strategy impact its efficiency ratio over 2024?",
+      "example_cn": "美国银行的数字化转型战略如何影响其2024年的效率比率？"
+    },
+    {
+      "category": "Complex Synthesis",
+      "template_en": "Analyze the relationship between [Metric A] and [Metric B] for [Entity].",
+      "template_cn": "分析[Entity]的[Metric A]与[Metric B]之间的关系。",
+      "example_en": "Analyze the relationship between Morgan Stanley's revenue growth and its expense efficiency ratio in 2024.",
+      "example_cn": "分析摩根士丹利2024年收入增长与其费用效率比率之间的关系。"
+    },
+    {
+      "category": "Complex Synthesis",
+      "template_en": "How do [Macro Factors] influence [Entity]'s [Segment] performance?",
+      "template_cn": "[Macro Factors]如何影响[Entity]的[Segment]业绩？",
+      "example_en": "How do prolonged high interest rates influence Bank of America's consumer banking performance?",
+      "example_cn": "长期高利率如何影响美国银行的零售银行业务业绩？"
+    },
+    {
+      "category": "Complex Synthesis",
+      "template_en": "How does [Entity] align its [Segment] goals with its overall [Strategy]?",
+      "template_cn": "[Entity]如何将其[Segment]目标与整体[Strategy]保持一致？",
+      "example_en": "How does JPMorgan align its business segment reorganization with its operational efficiency goals?",
+      "example_cn": "摩根大通如何将其业务板块重组与运营效率目标保持一致？"
+    },
+    {
+      "category": "Complex Synthesis",
+      "template_en": "Synthesize the [Risk Factors] that could affect [Entity]'s [Metric] in [Time Period].",
+      "template_cn": "综合分析可能在[Time Period]影响[Entity]的[Metric]的[Risk Factors]。",
+      "example_en": "Synthesize the geopolitical and macroeconomic risk factors that could affect Citigroup's net income in 2024.",
+      "example_cn": "综合分析可能影响花旗集团2024年净利润的地缘政治和宏观经济风险因素。"
+    },
+    {
+      "category": "Complex Synthesis",
+      "template_en": "Explain how [Entity] manages [Risk Type] across its global operations.",
+      "template_cn": "解释[Entity]如何在全全球业务中管理[Risk Type]。",
+      "example_en": "Explain how Citigroup manages foreign exchange risks in its banking book across different jurisdictions.",
+      "example_cn": "解释花旗集团如何在不同司法管辖区的银行账簿中管理外汇风险。"
+    },
+    {
+      "category": "Complex Synthesis",
+      "template_en": "Discuss the implications of [Entity]'s [Event] on its long-term [Metric].",
+      "template_cn": "讨论[Entity]的[Event]对其长期[Metric]的影响。",
+      "example_en": "Discuss the implications of Bank of America's infrastructure modernization on its long-term efficiency ratio.",
+      "example_cn": "讨论美国银行基础设施现代化对其长期效率比率的影响。"
+    },
+    {
+      "category": "Complex Synthesis",
+      "template_en": "Analyze the effectiveness of [Entity]'s [Program] based on [Section].",
+      "template_cn": "根据[Section]分析[Entity]的[Program]的有效性。",
+      "example_en": "Analyze the effectiveness of Morgan Stanley's executive compensation framework in aligning with long-term objectives.",
+      "example_cn": "分析摩根士丹利高管薪酬框架在与长期目标保持一致方面的有效性。"
+    },
+    {
+      "category": "Complex Synthesis",
+      "template_en": "How does [Entity] differentiate its [Product/Service] from competitors?",
+      "template_cn": "[Entity]如何将其[Product/Service]与竞争对手区分开来？",
+      "example_en": "How does Bank of America differentiate its preferred stock redemption terms from Citigroup's?",
+      "example_cn": "美国银行如何将其优先股赎回条款与花旗集团区分开来？"
+    },
+    {
+      "category": "Complex Synthesis",
+      "template_en": "How do [Geopolitical Events] affect [Entity]'s [Segment] in [Region]?",
+      "template_cn": "[Geopolitical Events]如何影响[Entity]在[Region]的[Segment]？",
+      "example_en": "How do sanctions affect Citigroup's investment banking segment in Russia?",
+      "example_cn": "制裁如何影响花旗集团在俄罗斯的投资银行业务板块？"
+    },
+    {
+      "category": "Complex Synthesis",
+      "template_en": "Synthesize the [Entity] management's outlook for [Metric] in [Time Period].",
+      "template_cn": "综合分析[Entity]管理层对[Time Period]内[Metric]的展望。",
+      "example_en": "Synthesize the Bank of America management's outlook for credit loss provisions in 2025.",
+      "example_cn": "综合分析美国银行管理层对2025年信贷损失准备金的展望。"
+    },
+    {
+      "category": "Complex Synthesis",
+      "template_en": "Compare [Entity]'s [Metric] performance across different [Regions].",
+      "template_cn": "比较[Entity]在不同[Regions]的[Metric]表现。",
+      "example_en": "Compare Wells Fargo's loan concentration risk across developed markets and emerging markets.",
+      "example_cn": "比较富国银行在发达市场和新兴市场的贷款集中风险。"
+    },
+    {
+      "category": "Complex Synthesis",
+      "template_en": "Explain the causal link between [Factor] and [Entity]'s [Metric].",
+      "template_cn": "解释[Factor]与[Entity]的[Metric]之间的因果关系。",
+      "example_en": "Explain the causal link between rising interest rates and Citigroup's net interest income volatility.",
+      "example_cn": "解释利率上升与花旗集团净利息收入波动之间的因果关系。"
+    },
+    {
+      "category": "Complex Synthesis",
+      "template_en": "How does [Entity]'s [Governance Structure] support its [Risk Management]?",
+      "template_cn": "[Entity]的[Governance Structure]如何支持其[Risk Management]？",
+      "example_en": "How does Citigroup's cybersecurity governance structure support its operational risk mitigation?",
+      "example_cn": "花旗集团的网络安全治理结构如何支持其运营风险缓解？"
+    },
+    {
+      "category": "Quantitative Reasoning",
+      "template_en": "Calculate the percentage change in [Metric] for [Entity] between [Year 1] and [Year 2].",
+      "template_cn": "计算[Entity]在[Year 1]和[Year 2]之间[Metric]的百分比变化。",
+      "example_en": "Calculate the percentage change in Morgan Stanley's net income from 2023 to 2024.",
+      "example_cn": "计算摩根士丹利2023年至2024年净利润的百分比变化。"
+    },
+    {
+      "category": "Quantitative Reasoning",
+      "template_en": "What is the total sum of [Metric A] and [Metric B] for [Entity] in [Time Period]?",
+      "template_cn": "[Entity]在[Time Period]的[Metric A]和[Metric B]的总和是多少？",
+      "example_en": "What is the total sum of net income and share repurchases for Citigroup in 2024?",
+      "example_cn": "花旗集团2024年净利润和股票回购的总和是多少？"
+    },
+    {
+      "category": "Quantitative Reasoning",
+      "template_en": "Compute the [Financial Ratio] for [Entity] using values from [Table Name].",
+      "template_cn": "使用[Table Name]中的数值计算[Entity]的[Financial Ratio]。",
+      "example_en": "Compute the efficiency ratio for Bank of America using values from the 2024 income statement.",
+      "example_cn": "使用2024年利润表中的数值计算美国银行的效率比率。"
+    },
+    {
+      "category": "Quantitative Reasoning",
+      "template_en": "Determine the difference in [Metric] between [Entity A] and [Entity B] for [Time Period].",
+      "template_cn": "确定[Entity A]和[Entity B]在[Time Period]内[Metric]的差异。",
+      "example_en": "Determine the difference in net income between Citigroup and Goldman Sachs for 2024.",
+      "example_cn": "确定花旗集团和高盛2024年净利润的差异。"
+    },
+    {
+      "category": "Quantitative Reasoning",
+      "template_en": "What is the average [Metric] for [Entity] over the last [Number] years?",
+      "template_cn": "[Entity]在过去[Number]年里的平均[Metric]是多少？",
+      "example_en": "What is the average daily Value at Risk (VaR) for Goldman Sachs over the last 2 years?",
+      "example_cn": "高盛过去两年的平均每日风险价值（VaR）是多少？"
+    },
+    {
+      "category": "Quantitative Reasoning",
+      "template_en": "Calculate the [Metric] per share for [Entity] in [Time Period].",
+      "template_cn": "计算[Entity]在[Time Period]的每股[Metric]。",
+      "example_en": "Calculate the net income per share for Bank of America in 2024.",
+      "example_cn": "计算美国银行2024年的每股净利润。"
+    },
+    {
+      "category": "Quantitative Reasoning",
+      "template_en": "What is the year-over-year growth rate of [Entity]'s [Metric]?",
+      "template_cn": "[Entity]的[Metric]同比增长率是多少？",
+      "example_en": "What is the year-over-year growth rate of Citigroup's Markets segment revenue?",
+      "example_cn": "花旗集团市场业务板块收入的同比增长率是多少？"
+    },
+    {
+      "category": "Quantitative Reasoning",
+      "template_en": "Compute the [Metric] as a percentage of [Total Metric] for [Entity].",
+      "template_cn": "计算[Entity]的[Metric]占[Total Metric]的百分比。",
+      "example_en": "Compute the credit card loans as a percentage of total loans for Wells Fargo.",
+      "example_cn": "计算富国银行信用卡贷款占总贷款的百分比。"
+    },
+    {
+      "category": "Quantitative Reasoning",
+      "template_en": "Calculate the net change in [Metric] for [Entity] from [Date 1] to [Date 2].",
+      "template_cn": "计算[Entity]从[Date 1]到[Date 2]的[Metric]净变化。",
+      "example_en": "Calculate the net change in Bank of America's nonperforming loans from 2023 to 2024.",
+      "example_cn": "计算美国银行2023年至2024年不良贷款的净变化。"
+    },
+    {
+      "category": "Quantitative Reasoning",
+      "template_en": "What is the [Metric] for [Entity] after adjusting for [Factor]?",
+      "template_cn": "在针对[Factor]进行调整后，[Entity]的[Metric]是多少？",
+      "example_en": "What is the net income for Citigroup after adjusting for transformation costs in 2024?",
+      "example_cn": "在针对2024年转型成本进行调整后，花旗集团的净利润是多少？"
+    },
+    {
+      "category": "Quantitative Reasoning",
+      "template_en": "Sum the [Metric] for all [Entity] segments in [Time Period].",
+      "template_cn": "计算[Time Period]内[Entity]所有板块的[Metric]总和。",
+      "example_en": "Sum the noninterest income for all Bank of America segments in 2024.",
+      "example_cn": "计算2024年美国银行所有板块的非利息收入总和。"
+    },
+    {
+      "category": "Quantitative Reasoning",
+      "template_en": "Calculate the [Metric] margin for [Entity] in [Time Period].",
+      "template_cn": "计算[Entity]在[Time Period]的[Metric]利润率。",
+      "example_en": "Calculate the net interest margin for JPMorgan Chase in 2024.",
+      "example_cn": "计算摩根大通2024年的净利息收益率。"
+    },
+    {
+      "category": "Quantitative Reasoning",
+      "template_en": "What is the compound annual growth rate (CAGR) of [Entity]'s [Metric]?",
+      "template_cn": "[Entity]的[Metric]复合年增长率（CAGR）是多少？",
+      "example_en": "What is the CAGR of Morgan Stanley's Wealth Management revenue from 2020 to 2024?",
+      "example_cn": "2020年至2024年摩根士丹利财富管理收入的复合年增长率是多少？"
+    },
+    {
+      "category": "Quantitative Reasoning",
+      "template_en": "Compute the [Metric] variance between [Actual] and [Projected] for [Entity].",
+      "template_cn": "计算[Entity]的[Actual]与[Projected][Metric]之间的差异。",
+      "example_en": "Compute the revenue variance between actual results and strategic targets for Citigroup.",
+      "example_cn": "计算花旗集团实际业绩与战略目标之间的收入差异。"
+    },
+    {
+      "category": "Quantitative Reasoning",
+      "template_en": "Calculate the [Metric] for [Entity] based on the formula in [Section].",
+      "template_cn": "根据[Section]中的公式计算[Entity]的[Metric]。",
+      "example_en": "Calculate the Net Interest Yield for Bank of America based on the formula in the Key Metrics section.",
+      "example_cn": "根据关键指标章节中的公式计算美国银行的净利息收益率。"
+    },
+    {
+      "category": "Quantitative Reasoning",
+      "template_en": "What is the total [Metric] for [Entity] across [Region A] and [Region B]?",
+      "template_cn": "[Entity]在[Region A]和[Region B]的总[Metric]是多少？",
+      "example_en": "What is the total property square footage for Bank of America across the U.S. and International regions?",
+      "example_cn": "美国银行在美国和国际地区的物业总面积是多少？"
+    },
+    {
+      "category": "Quantitative Reasoning",
+      "template_en": "Determine the [Metric] for [Entity] by subtracting [Value A] from [Value B].",
+      "template_cn": "通过从[Value B]中减去[Value A]来确定[Entity]的[Metric]。",
+      "example_en": "Determine the tangible common equity for Citigroup by subtracting goodwill from total equity.",
+      "example_cn": "通过从总权益中减去商誉来确定花旗集团的有形普通股权益。"
+    },
+    {
+      "category": "Quantitative Reasoning",
+      "template_en": "Calculate the [Metric] for [Entity] for the [Time Period] ended [Date].",
+      "template_cn": "计算[Entity]截至[Date]的[Time Period][Metric]。",
+      "example_en": "Calculate the total dividends paid for Bank of America for the fiscal year ended December 31, 2024.",
+      "example_cn": "计算美国银行截至2024年12月31日财年的已付股息总额。"
+    },
+    {
+      "category": "Quantitative Reasoning",
+      "template_en": "What is the weighted average [Metric] for [Entity]'s [Portfolio]?",
+      "template_cn": "[Entity]的[Portfolio]加权平均[Metric]是多少？",
+      "example_en": "What is the weighted average interest rate for Morgan Stanley's savings deposits in 2024?",
+      "example_cn": "2024年摩根士丹利储蓄存款的加权平均利率是多少？"
+    },
+    {
+      "category": "Quantitative Reasoning",
+      "template_en": "Compute the [Metric] for [Entity] assuming a [Percentage] increase in [Factor].",
+      "template_cn": "假设[Factor]增加[Percentage]，计算[Entity]的[Metric]。",
+      "example_en": "Compute the reduction in Citigroup's tangible common equity assuming a 5% USD appreciation.",
+      "example_cn": "假设美元升值5%，计算花旗集团有形普通股权益的减少量。"
+    },
+    {
+      "category": "Multimodal Parsing",
+      "template_en": "Crop the region containing [Figure Name] from page [Number].",
+      "template_cn": "从第[Number]页裁剪包含[Figure Name]的区域。",
+      "example_en": "Crop the region containing the Net Income trend chart from page 45.",
+      "example_cn": "从第45页裁剪包含净利润趋势图的区域。"
+    },
+    {
+      "category": "Multimodal Parsing",
+      "template_en": "OCR all text from the [Chart/Figure] titled [Title].",
+      "template_cn": "对标题为[Title]的[Chart/Figure]中的所有文本进行OCR识别。",
+      "example_en": "OCR all text from the bar chart titled 2024 Segment Performance.",
+      "example_cn": "对标题为“2024年板块业绩”的柱状图中的所有文本进行OCR识别。"
+    },
+    {
+      "category": "Multimodal Parsing",
+      "template_en": "Extract the full paragraph block discussing [Topic] in [Section].",
+      "template_cn": "提取[Section]中讨论[Topic]的完整段落块。",
+      "example_en": "Extract the full paragraph block discussing climate risk management in the Risk Factors section.",
+      "example_cn": "提取风险因素章节中讨论气候风险管理的完整段落块。"
+    },
+    {
+      "category": "Multimodal Parsing",
+      "template_en": "Capture the image of the [Chart/Graph] showing [Metric] trends.",
+      "template_cn": "捕获显示[Metric]趋势的[Chart/Graph]图像。",
+      "example_en": "Capture the image of the line graph showing CET1 ratio trends over five years.",
+      "example_cn": "捕获显示五年内核心一级资本充足率趋势的折线图图像。"
+    },
+    {
+      "category": "Multimodal Parsing",
+      "template_en": "Read the labels and values from the [Axis Name] of [Figure Name].",
+      "template_cn": "读取[Figure Name]中[Axis Name]的标签和数值。",
+      "example_en": "Read the labels and values from the Y-axis of the Credit Loss Provisions chart.",
+      "example_cn": "读取信贷损失准备金图表Y轴的标签和数值。"
+    },
+    {
+      "category": "Multimodal Parsing",
+      "template_en": "Crop the [Information] from [Page ID].",
+      "template_cn": "从[Page ID]裁剪[Information]。",
+      "example_en": "Crop the Goldman Sachs logo and header information from the first page of the 10-K.",
+      "example_cn": "从10-K文件的第一页裁剪高盛的徽标和页眉信息。"
+    },
+    {
+      "category": "Multimodal Parsing",
+      "template_en": "Extract the layout of the [Page Number] including all text and visual blocks.",
+      "template_cn": "提取第[Page Number]页的布局，包括所有文本和视觉块。",
+      "example_en": "Extract the layout of page 10 including all text and visual blocks.",
+      "example_cn": "提取第10页的布局，包括所有文本和视觉块。"
+    },
+    {
+      "category": "Multimodal Parsing",
+      "template_en": "OCR the handwritten notes or annotations found in [Section].",
+      "template_cn": "对[Section]中发现的手写笔记或注释进行OCR识别。",
+      "example_en": "OCR the handwritten notes found in the Appendix section.",
+      "example_cn": "对附录章节中发现的手写笔记进行OCR识别。"
+    },
+    {
+      "category": "Multimodal Parsing",
+      "template_en": "Crop the [Map/Diagram] illustrating [Topic] from [Section].",
+      "template_cn": "从[Section]中裁剪说明[Topic]的[Map/Diagram]。",
+      "example_en": "Crop the map illustrating global office locations from the Properties section.",
+      "example_cn": "从物业章节中裁剪说明全球办公地点的地图。"
+    },
+    {
+      "category": "Multimodal Parsing",
+      "template_en": "Reconstruct the organizational chart shown in [Figure Name].",
+      "template_cn": "重构[Figure Name]中显示的组织架构图。",
+      "example_en": "Reconstruct the organizational chart shown in Figure 1.2.",
+      "example_cn": "重构图1.2中显示的组织架构图。"
+    },
+    {
+      "category": "Multimodal Parsing",
+      "template_en": "Crop the signature block from the end of [Section].",
+      "template_cn": "从[Section]末尾裁剪签名块。",
+      "example_en": "Crop the signature block from the end of the Certification section.",
+      "example_cn": "从认证章节末尾裁剪签名块。"
+    },
+    {
+      "category": "Multimodal Parsing",
+      "template_en": "Extract all data points from the [Scatter Plot/Bar Chart] in [Figure Name].",
+      "template_cn": "提取[Figure Name]中[Scatter Plot/Bar Chart]的所有数据点。",
+      "example_en": "Extract all data points from the bar chart in Figure 4.",
+      "example_cn": "提取图4柱状图中的所有数据点。"
+    },
+    {
+      "category": "Multimodal Parsing",
+      "template_en": "Capture the full page layout of page [Number] as a structured object.",
+      "template_cn": "将第[Number]页的完整页面布局捕获为结构化对象。",
+      "example_en": "Capture the full page layout of page 1 as a structured object.",
+      "example_cn": "将第1页的完整页面布局捕获为结构化对象。"
+    }
+  ]
+}

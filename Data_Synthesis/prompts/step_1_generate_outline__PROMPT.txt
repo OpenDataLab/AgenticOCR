@@ -1,0 +1,36 @@
+You are given a list of document title blocks in the following format:
+
+- Each item in the list is a dictionary containing:
+  1. `"type"`: block type (usually `"title"`)
+  2. `"content"`: OCR text of the title
+  3. `"bbox"`: title bounding box in `[y1, x1, y2, x2]` format, values in `0-1000`
+  4. `"page_id"`: page index where the title appears
+
+Input:
+```json
+{title_blocks}
+```
+
+Generate the document **outline** using these rules:
+
+1. Preserve the original title order, and do not remove any title.
+2. Infer title hierarchy automatically (up to 4 levels) using title semantics and visual size (`bbox` area/height).
+   - Larger title height usually indicates a higher-level heading.
+   - Hierarchy levels must be continuous (no level skipping).
+3. Output a nested dictionary that reflects parent-child structure and keeps page information, for example:
+
+```json
+{{
+  "Introduction (Page_id: 1)": {{}},
+  "Methods (Page_id: 3)": {{
+    "Experiment 1 (Page_id: 7)": {{}}
+  }},
+  "Results (Page_id: 10)": {{}}
+}}
+```
+
+4. Each title must appear exactly once in the nested structure.
+5. Validate hierarchy consistency to ensure the outline matches document logic.
+
+Target output:
+A nested dictionary outline where each key is a title text and each value is a dictionary of child titles. Use an empty dictionary `{{}}` if there are no children.

@@ -1,0 +1,19 @@
+
+### Role
+You are an expert document analyst.
+
+### Task
+**Answer Generation**: Answer the specific question provided below based on the evidence images or your own knowledge.
+
+### Question
+{question}
+
+### Output Format
+You must return a JSON object with the following structure:
+```json
+{{
+    "CoT": "<chain-of-thought here analyzing the image>",
+    "answer": "<Your concise answer>"
+}}
+
+Notice: If the evidence or your knowledge is not enough, you can answer "unknown".

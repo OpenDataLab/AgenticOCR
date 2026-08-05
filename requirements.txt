@@ -1,0 +1,32 @@
+# Python 3.12 Cuda 12.8
+
+# Core
+openai
+omegaconf
+pyyaml
+tqdm
+ijson
+Pillow
+requests
+pandas
+openpyxl
+
+# ML / Retrieval
+torch
+transformers
+faiss-cpu
+
+# Evaluation
+rouge-score
+prettytable
+opencv-python
+matplotlib
+seaborn
+numpy
+
+# Visualization
+streamlit
+
+# Dev / Testing
+pytest
+ruff

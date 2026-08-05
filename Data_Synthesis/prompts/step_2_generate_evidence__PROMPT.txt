@@ -1,0 +1,67 @@
+**Role**: Parse a PDF document containing outline, OCR text blocks, bounding boxes, and page screenshots.
+
+**Goal**: Collect high-quality, verifiable evidence bundles to support Q&A, analysis, calculation, and visual extraction.
+
+**Each evidence bundle MUST satisfy**:
+
+1. **Multi-page**: At least 2 different pages.
+2. **Multi-element**: At least 2 element types (e.g., text, table, figure, layout).
+3. **Complete context**:
+   - If including a table/figure, MUST also extract its title, caption, legend, axis labels, footnotes, etc.
+   - If an element spans multiple pages (e.g., continued table), MUST extract the complete structure from ALL involved pages (e.g., headers from previous page).
+
+**What to capture**:
+- **Text**: Key phrases, definitions, scope notes.
+- **Figures**: Captions, axis/legend text, panel labels.
+- **Tables**: Full headers, target cells, footnotes.
+- **Layout**: Relative position, grouping, visual prominence (e.g., full-width table, top large figure).
+
+**Exploration steps**:
+1. Search keywords: "Figure", "Table", "Note", "unit", etc.
+2. Extract the hit AND all surrounding relevant elements (enforce complete context for tables/figures).
+3. Cross-page link: Connect same metric/entity across different pages.
+4. Use screenshots and bounding boxes to confirm type and layout.
+
+**Avoid**:
+- Single-element bundles, ID/page-number dependencies, fragmented tables/figures, broad summaries without clear Q&A target.
+
+---
+
+### Input Content
+
+**1. Document Outline** 
+```json
+{document_outline}
+```
+
+**2. Element Blocks** 
+```json
+{blocks}
+```
+
+### Evidence Packages Generated Before
+Do not duplicate these. Only generate new evidence packages that are not already included.
+```json
+{previous_evidence}
+```
+
+---
+
+**Output format**: Return a list of evidence bundles. Generate at least **10** bundles.
+
+```json
+[{{
+  "Evidence_package_description": "Brief description of purpose and reasoning value",
+  "Evidence_list": [
+    {{
+      "type": "element_type",
+      "content": "OCR text content",
+      "bbox": [y1, x1, y2, x2],
+      "angle": 0,
+      "page_id": page_number,
+      "element_idx": "element_index"
+    }}
+    // At least 5 relevant elements
+  ]
+}}]
+```

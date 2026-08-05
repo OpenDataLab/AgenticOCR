@@ -1,0 +1,17 @@
+Task:
+Evaluate whether the test answer is correct relative to the true answer.
+
+Input:
+Question: {question}
+True Answer: {standard_answer}
+Test Answer: {model_answer}
+
+Output:
+Return exactly one label:
+- Correct
+- Partially Correct
+- Incorrect
+
+Rules:
+- If the test answer is unknown/no-answer/irrelevant, return Incorrect.
+- Return label only.

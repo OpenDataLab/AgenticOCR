@@ -1,0 +1,36 @@
+Task:
+Generate QA pairs from the given evidence package and selected templates.
+
+Input:
+- Evidence package:
+```json
+{evidence_package}
+```
+- Selected templates:
+```json
+{Template}
+```
+
+Requirements:
+1. Questions must be answerable only from the provided evidence.
+2. Answers must be factual and directly supported by evidence.
+3. Generate questions in {language} only.
+4. Keep answers concise. For Complex Synthesis, longer answers are allowed.
+5. If a valid QA cannot be generated, return `[]`.
+
+Output format:
+```json
+[
+  {{
+    "Question": "...",
+    "Answer": "...",
+    "Evidence_element_depended_idx": [1, 2],
+    "Template": "...",
+    "Template_type": "..."
+  }}
+]
+```
+
+Constraints:
+- Return JSON only.
+- `Evidence_element_depended_idx` must include exact supporting element indices.

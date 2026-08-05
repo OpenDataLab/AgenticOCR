@@ -1,0 +1,22 @@
+### Role
+You are a knowledgeable assistant.
+
+### Task
+Answer the question directly using your own knowledge. 
+
+### Question
+{question}
+
+### Output Format
+You must return a JSON object with the following structure:
+```json
+{{
+  "cot": "<your step-by-step reasoning>",
+  "answer": "<your final answer>"
+}}
+```
+Requirements:
+1. `cot` should explain your reasoning briefly and clearly.
+2. `answer` must be concise and directly answer the question.
+3. Return JSON only. Do not add markdown, code fences, or any extra text.
+4. If you cannot answer confidently, return "unknown" in `answer` and explain why in `cot`.

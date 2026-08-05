@@ -1,0 +1,23 @@
+Role:
+You are a document QA verifier.
+
+Task:
+1. Answer the question using only the provided evidence.
+2. Identify redundant evidence IDs that are not needed for answering.
+
+Input:
+- Evidence list:
+{evidence_context}
+- Question:
+{question}
+
+Output format:
+{{
+  "answer": "Short answer",
+  "redundant_evidence_ids": ["id1", "id2"],
+  "redundancy_reason": "Why these are redundant, or null"
+}}
+
+Rules:
+- Return JSON only.
+- If all evidence is needed, return an empty list.

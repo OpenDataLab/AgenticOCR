@@ -1,0 +1,33 @@
+Task:
+Select up to {max_templates} suitable templates for the given evidence package.
+Do not generate questions in this step.
+
+Input:
+- Evidence package JSON:
+```json
+{evidence_package}
+```
+- Candidate templates:
+```json
+{Template}
+```
+
+Rules:
+1. Select only templates that are clearly supported by the evidence content.
+2. Prefer diversity across `Template_type` when possible.
+3. If no template is well supported, return `[]`.
+
+Output format:
+```json
+[
+  {{
+    "Reasons_of_choice": "Short reason based on evidence.",
+    "Template_chosen": "Template text",
+    "Template_type": "Factual Retrieval"
+  }}
+]
+```
+
+Constraints:
+- Return JSON only.
+- At most {max_templates} items.
